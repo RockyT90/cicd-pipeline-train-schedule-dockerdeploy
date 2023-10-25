@@ -45,7 +45,6 @@ pipeline {
                 input 'Deploy to Production?'
                 milestone(1)
                 kubernetesDeploy{
-                    kubeconfigId: 'k8s-cluster-01'
                     configs: 'train-schedule-kube.yaml'
                     enableConfigSubstitution: true
                 }
